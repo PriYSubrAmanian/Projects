@@ -1,0 +1,47 @@
+<p>invoicelist works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        
+                        <th>Invoice Id</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>actions</th>
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>11</td>
+                    <td>50</td>
+                    <td>500</td>
+                    
+                </tr>
+                <tr *ngFor="let tempinv of invoices">
+                <td>{{tempinv.invoice_id}}</td>
+                <td>{{tempinv.quantity}}</td>
+                <td>{{tempinv.total}}</td>
+                
+                <button type="button" class="btn btn-md btn-success" (click)="updateInvoice(tempinv.invoice_id)">Update</button>&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteInvoice(tempinv.invoice_id)">Delete </button>
+                    </tr>
+                </table>
+                </div>
+                <button class="atu-btn-submit btn btn-info" (click) = "addInvoice()" >Add </button>
+    
+            </div>
+        </div>
+    </div>
+
+                
+           
+    
+
+ 
+
+

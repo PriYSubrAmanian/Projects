@@ -1,0 +1,50 @@
+<p>categorylist works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Category Name</th>
+                        <th>Created User</th>
+                        <th>Created Date Time</th>
+                        <th>Last Modified User</th>
+                        <th>Last Modified Date Time</th>
+                        <th>actions</th>
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>Dhal</td>
+                    <td>Rohini</td>
+                    <td>03/03/2023</td>
+                    <td>Kumar</td>
+                    <td>03/03/2023</td>
+                </tr>
+                <tr *ngFor="let tempCat of categories">
+                    <td>{{tempCat.category_name}}</td>
+                    <td>{{tempCat.created_user}}</td>
+                    <td>{{tempCat.created_date_time}}</td>
+                    <td>{{tempCat.last_modified_user}}</td>
+                    <td>{{tempCat.last_modified_date_time}}</td>
+                <button type="button" class="btn btn-md btn-success" (click)="updateCategory(tempCat.category_id)">Update</button>&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteCategory(tempCat.category_id)">Delete </button>
+                    </tr>
+                </table>
+                </div>
+                <button class="atu-btn-submit btn btn-info" (click) = "addCategory()" >Add </button>
+    
+            </div>
+        </div>
+    </div>
+
+                
+           
+    
+
+ 
+
+

@@ -1,0 +1,56 @@
+<p>stocklist works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Ref Id</th>
+                        <th>Branch Id</th>
+                        <th>Created User</th>
+                        <th>Date Stock</th>
+                        <th>Last Modified Date Time</th>
+                        <th>Last Modified User</th>
+                        <th>Quantity</th>
+                        <th>actions</th>
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>3</td>
+                    <td>101</td>
+                    <td>Rohini</td>
+                    <td>03/03/2023</td>
+                    <td>03/03/2023</td>
+                    <td>Priya</td>
+                    <td>25</td>
+                </tr>
+                <tr *ngFor="let tempSto of stocks">
+                <td>{{tempSto.ref_id}}</td>
+                <td>{{tempSto.branch_id}}</td>
+                <td>{{tempSto.created_user}}</td>
+                <td>{{tempSto.date_stock}}</td>
+                <td>{{tempSto.last_modified_date_time}}</td>
+                 <td>{{tempSto.last_modified_user}}</td>
+                 <td>{{tempSto.quantity}}</td>   
+                <button type="button" class="btn btn-md btn-success" (click)="updateStock(tempSto.ref_id)">Update</button>&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteStock(tempSto.ref_id)">Delete </button>
+                    </tr>
+                </table>
+                </div>
+                <button class="atu-btn-submit btn btn-info" (click) = "addStock()" >Add </button>
+    
+            </div>
+        </div>
+    </div>
+
+                
+           
+    
+
+ 
+
+

@@ -1,0 +1,64 @@
+<p>productform works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <form #spForm="ngForm" (ngSubmit)="onSubmit()">
+              <div *ngIf="product.productid==0"><h1>Add Product</h1></div>
+              <div *ngIf="product.productid>0"><h1>Update Product</h1></div>
+  
+              <div class="form-group row">
+                <label class ="col-sm-2 col-form-label">Product Name</label>
+                <div class ="col-sm-10">
+                    <input type ="text" name="productname" [(ngModel)]="product.productname" />
+                </div>
+              </div>
+                <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Created User</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="created_user" [(ngModel)]="product.created_user" />
+                    </div>
+                  </div>
+                  
+                <div class="form-group row">
+                  <label class ="col-sm-2 col-form-label"> Created Date Time</label>
+                  <div class ="col-sm-10">
+                      <input type ="date" name="created_date_time" [(ngModel)]="product.created_date_time" />
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Last Modified User</label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="last_modified_user" [(ngModel)]="product.last_modified_user" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                  <label class ="col-sm-2 col-form-label">Last Modified Date Time </label>
+                  <div class ="col-sm-10">
+                      <input type ="date" name="last_modified_date_time" [(ngModel)]="product.last_modified_date_time" />
+                  </div>
+  
+                </div>
+                <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Product Buying price </label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="productbuying_price" [(ngModel)]="product.productbuying_price" />
+                    </div>
+    
+                  </div>
+                  <div class="form-group row">
+                    <label class ="col-sm-2 col-form-label">Product Selling price </label>
+                    <div class ="col-sm-10">
+                        <input type ="text" name="productselling_price" [(ngModel)]="product.productselling_price" />
+                    </div>
+    
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-2"><button type ="submit"class="btn btn-info">Submit</button></div>
+                    <div class="col-sm-2"><button type="reset" class="btn btn-info">Reset</button></div>
+                  </div>
+                </form>
+            </div>
+            </div>
+            </div>
+  
+  

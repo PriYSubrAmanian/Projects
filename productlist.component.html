@@ -1,0 +1,57 @@
+<p>productlist works!</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table table-bordered'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Product Name</th>
+                        <th>Created User</th>
+                        <th>Created Date Time</th>
+                        <th>Last Modified User</th>
+                        <th>Last Modified Date Time</th>
+                        <th>Product Buying Price</th>
+                        <th>Product Selling Price</th>
+                        
+                        <th>actions</th>
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>Cornflour</td>
+                    <td>Rohini</td>
+                    <td>03/03/2023</td>
+                    <td>Kumar</td>
+                    <td>03/03/2023</td>
+                    <td>100</td>
+                    <td>110</td>
+                </tr>
+                <tr *ngFor="let tempPro of products">
+                    <td>{{tempPro.productname}}</td>
+                <td>{{tempPro.created_user}}</td>
+                <td>{{tempPro.created_date_time}}</td>
+                <td>{{tempPro.last_modified_user}}</td>
+                <td>{{tempPro.last_modified_date_time}}</td>
+                <td>{{tempPro.productbuying_price}}</td>
+                <td>{{tempPro.productselling_price}}</td>
+                <button type="button" class="btn btn-md btn-success" (click)="updateProduct(tempPro.productid)">Update</button>&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteProduct(tempPro.productid)">Delete </button>
+                    </tr>
+                </table>
+                </div>
+                <button class="atu-btn-submit btn btn-info" (click) = "addProduct()" >Add </button>
+    
+            </div>
+        </div>
+    </div>
+
+                
+           
+    
+
+ 
+
+
